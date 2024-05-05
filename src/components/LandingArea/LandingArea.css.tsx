@@ -38,6 +38,16 @@ export const PersonWrapper = styled.div`
     background: url(${PersonImage}) center center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        height: 80vh;
+        top: 20%;
+    }
+
+    ${minWidthQuery(Breakpoints.large)} {
+        height: 85vh;
+        top: 15%;
+    }
 `;
 
 export const RoleWrapper = styled.div`
