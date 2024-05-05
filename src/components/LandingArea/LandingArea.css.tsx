@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import LandingAreaWallpaper from '../../assets/LandingArea.jpeg';
 import PersonImage from '../../assets/PersonImage.png';
+import { Breakpoints, minWidthQuery } from "../../utils/globals";
 
-export const LandingAreaWrapper = styled.div`
+export const LandingAreaWrapper = styled.div<{
+    isSmallDevice: boolean;
+}>`
     height: 100vh;
     position: relative;
     background: url(${LandingAreaWallpaper}) center center;
-    background-size: contain;
+    background-size: ${(props) => props.isSmallDevice ? 'cover' : 'contain'};
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -14,8 +17,16 @@ export const DescriptionWrapper = styled.div`
     top: 17.5%;
     left: 5%;
     position: absolute;
-    font-size: 2rem;
     color: White;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        width: 30%;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        width: 35%;
+    }
+
 `;
 
 export const PersonWrapper = styled.div`
@@ -30,13 +41,22 @@ export const PersonWrapper = styled.div`
 `;
 
 export const RoleWrapper = styled.div`
-    width: 71%;
+    width: 50%;
     font-family: 'Aspekta', sans-serif;
     letter-spacing: 0.15rem;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        width: 88.75%;
+        font-size: 2rem;
+    }
+
+    ${minWidthQuery(Breakpoints.large)} {
+        width: 63.25%;
+    }
 `;
 
 export const FirstLine = styled.div`
-    text-align: left;    
+    text-align: left;
 `;
 
 export const SecondLine = styled.div`
@@ -60,4 +80,12 @@ export const RoleDescription = styled.div`
     line-height: 1.5rem;
     font-size: 0.9rem;
     font-weight: 50;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        font-size: 0.75rem;
+    }
+
+    ${minWidthQuery(Breakpoints.large)} {
+        font-size: 0.9rem;
+    }
 `;
