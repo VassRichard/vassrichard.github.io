@@ -35,19 +35,17 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const PersonWrapper = styled.div`
-    height: 85vh;
+    height: 39vh;
     position: relative;
-    top: 15%;
+    top: 61%;
     opacity: 0.75;
     background: url(${PersonImage}) center center;
     background-size: contain;
     background-repeat: no-repeat;
-    top: 38%;
 
     ${minWidthQuery(Breakpoints.nano)} {
-        height: 40vh;
-        top: 60.5%;
-        margin: 0;
+        height: 39vh;
+        top: 61%;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
