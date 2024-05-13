@@ -15,12 +15,12 @@ export const LandingAreaWrapper = styled.div<{
 export const DescriptionWrapper = styled.div`
     top: 17.5%;
     position: absolute;
+    left: 5%;
+    right: 5%;
     color: White;
 
     ${minWidthQuery(Breakpoints.nano)} {
         width: 90%;
-        left: 5%;
-        right: 5%;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
@@ -42,6 +42,7 @@ export const PersonWrapper = styled.div`
     background: url(${PersonImage}) center center;
     background-size: contain;
     background-repeat: no-repeat;
+    top: 38%;
 
     ${minWidthQuery(Breakpoints.nano)} {
         height: 40vh;
@@ -62,18 +63,16 @@ export const PersonWrapper = styled.div`
 `;
 
 export const RoleWrapper = styled.div`
-    width: 50%;
+    font-size: 2rem;
     font-family: 'Aspekta', sans-serif;
     letter-spacing: 0.15rem;
 
     ${minWidthQuery(Breakpoints.nano)} {
         width: 100%;
-        font-size: 2rem;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
         width: 88.75%;
-        font-size: 2rem;
     }
 
     ${minWidthQuery(Breakpoints.large)} {
@@ -111,13 +110,10 @@ export const SeparatorSpace = styled.div<{ marginValue: number }>`
 `;
 
 export const RoleDescription = styled.div`
+    text-align: center;
     line-height: 1.5rem;
     font-size: 0.9rem;
     font-weight: 50;
-
-    ${minWidthQuery(Breakpoints.nano)} {
-        text-align: center;
-    }
 
     ${minWidthQuery(Breakpoints.medium)} {
         font-size: 0.75rem;
