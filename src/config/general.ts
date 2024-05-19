@@ -39,6 +39,6 @@ export const TechnologyConfig: TechnologyConfigType[] = [
 
 export const ExperienceAreaConfig: ExperienceAreaConfigType = {
     title: "TECH STACK & EXPERTISE",
-    description: "and some tech I like to work with",
+    curriculumVitae: "DOWNLOAD CV",
     technologies: TechnologyConfig,
 };

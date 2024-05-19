@@ -15,7 +15,7 @@ export type RoleConfigType = {
 
 export type ExperienceAreaConfigType = {
     title: string;
-    description: string;
+    curriculumVitae: string;
     technologies: TechnologyConfigType[]
 };
 

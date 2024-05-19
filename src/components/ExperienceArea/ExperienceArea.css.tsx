@@ -25,6 +25,8 @@ export const CurriculumVitaeText = styled.div`
     color: white;
     font-size: 1rem;
     letter-spacing: 0.1rem;
+    cursor: pointer;
+    user-select: none;
 `;
 
 export const TechnologyCardsWrapper = styled.div`
