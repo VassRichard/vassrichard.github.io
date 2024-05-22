@@ -1,31 +1,68 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import MoreIcon from "../../../assets/technologies/more_icon.png";
+
 
 export const TechnologyCardWrapper = styled.div`
     width: 17.5rem;
     height: 22.5rem;
 `;
 
-export const TechnologyCardTitleWrapper = styled.div`
-    height: 5rem;
-    text-align: center;
+export const TechnologyCardTitle = styled.div`
+    width: 100%;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Aspekta', sans-serif;
+    text-align: start;
     align-items: center;
-    display: flex;
-    justify-content: center;
 `;
 
-export const TechnologyCardTitle = styled.div`
-    align-items: center;
-    font-size: 1.75rem;
-    font-family: 'Aspekta', sans-serif;
-    font-weight: bold;
+export const TechnologyCardWallpaperWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    background-size: cover; 
+    background-position: center;
+    transition: filter 0.3s ease-in-out;
 `;
 
 export const TechnologyCardWallpaper = styled.div<{ wallpaper: string }>`
     width: 100%;
     height: 100%;
-    border: 0.1rem solid black;
-    background-image: url(${(props) => props.wallpaper});
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) -10%, rgba(0, 0, 0, 0) 50%), url(${(props) => props.wallpaper});
     background-size: cover; 
     background-position: center;
-    filter: grayscale(100%);
+    border-radius: 0.5rem;
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+`;
+
+const fadeInSlideUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const MoreIconWrapper = styled.div`
+    width: 2.5rem;
+    height: 100%;
+    margin: 0 auto;
+    left: 42.5%; 
+    background-image: url(${MoreIcon});
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    opacity: 0; /* Start with the icon hidden */
+    animation: ${fadeInSlideUp} 0.5s forwards; /* Animation for appearance */
 `;

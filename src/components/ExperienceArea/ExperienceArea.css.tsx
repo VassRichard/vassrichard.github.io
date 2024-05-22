@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const SeparatorSpace = styled.div`
+    padding: 1.5rem;
+`;
+
 export const ExperienceAreaWrapper = styled.div`
     height: 100vh;
     background-color: #FFFFFF;
@@ -11,7 +15,7 @@ export const TitleText = styled.div`
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Aspekta', sans-serif;
-    font-weight: 500;
+    font-weight: 100;
     letter-spacing: 0.05rem;
 `;
 

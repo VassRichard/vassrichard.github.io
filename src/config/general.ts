@@ -2,6 +2,7 @@ import { LandingAreaConfigType, RoleConfigType, ExperienceAreaConfigType, Techno
 import Mobile from "../assets/technologies/mobile.jpg";
 import Web from "../assets/technologies/web.jpg";
 import MachineLearning from "../assets/technologies/machine_learning.jpg";
+
 // LANDING AREA
 
 export const LandingAreaRoleConfig: RoleConfigType = {
@@ -21,21 +22,40 @@ export const LandingAreaConfig: LandingAreaConfigType = {
 
 export const TechnologyConfig: TechnologyConfigType[] = [
     {
-        title: "MOBILE",
+        title: "Mobile development",
         wallpaper: Mobile,
         description: "TEST"
     },
     {
-        title: "WEB",
+        title: "Web development",
         wallpaper: Web,
         description: "TEST"
     },
     {
-        title: "MACHINE LEARNING",
+        title: "Machine learning",
         wallpaper: MachineLearning,
         description: "TEST"
     }
 ];
+
+
+// export const TechnologyConfig: TechnologyConfigType[] = [
+//     {
+//         title: "MOBILE",
+//         wallpaper: Mobile,
+//         description: "TEST"
+//     },
+//     {
+//         title: "WEB",
+//         wallpaper: Web,
+//         description: "TEST"
+//     },
+//     {
+//         title: "MACHINE LEARNING",
+//         wallpaper: MachineLearning,
+//         description: "TEST"
+//     }
+// ];
 
 export const ExperienceAreaConfig: ExperienceAreaConfigType = {
     title: "TECH STACK & EXPERTISE",
