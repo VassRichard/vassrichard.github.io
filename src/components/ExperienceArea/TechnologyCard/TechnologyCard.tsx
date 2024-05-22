@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { TechnologyCardWrapper, TechnologyCardTitle, TechnologyCardWallpaperWrapper, TechnologyCardWallpaper, MoreIconWrapper } from './TechnologyCard.css';
+import { TechnologyCardContainer, TechnologyCardTitle, TechnologyCardWrapper, TechnologyCardWallpaper, MoreIconWrapper } from './TechnologyCard.css';
 import { TechnologyConfigType } from "../../../utils/types";
 import { PopupExample } from "../../Pop-up/Pop-up";
 import 'reactjs-popup/dist/index.css';
@@ -30,13 +30,16 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
     };
 
     return (
-        <TechnologyCardWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+        <TechnologyCardContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
             <PopupExample isOpen={isPopupOpen} closePopup={closePopup} />
-            <TechnologyCardWallpaperWrapper onClick={openPopup}>
+            <TechnologyCardWrapper onClick={openPopup}>
                 <TechnologyCardWallpaper wallpaper={technology.wallpaper} />
-                <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
-                {isMoreIconShown && <MoreIconWrapper />}
-            </TechnologyCardWallpaperWrapper>
-        </TechnologyCardWrapper>
+                {/* <TechnologyCardMetadataWrapper> */}
+                    <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
+                    {/* <TechnologyCardDescription>{technology.description}</TechnologyCardDescription> */}
+                    {isMoreIconShown && <MoreIconWrapper />}
+                {/* </TechnologyCardMetadataWrapper> */}
+            </TechnologyCardWrapper>
+        </TechnologyCardContainer>
     )
 };

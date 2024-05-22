@@ -24,17 +24,17 @@ export const TechnologyConfig: TechnologyConfigType[] = [
     {
         title: "Mobile development",
         wallpaper: Mobile,
-        description: "TEST"
+        description: "Building apps that are smooth, sleek, and oh-so-simple to use."
     },
     {
         title: "Web development",
         wallpaper: Web,
-        description: "TEST"
+        description: "Making websites that look good and do cool things."
     },
     {
         title: "Machine learning",
         wallpaper: MachineLearning,
-        description: "TEST"
+        description: "Using data to solve problems and make life easier."
     }
 ];
 
