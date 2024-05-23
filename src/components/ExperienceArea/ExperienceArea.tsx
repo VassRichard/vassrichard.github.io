@@ -29,12 +29,12 @@ export const ExperienceArea: FC = () => {
 
     return (
         <ExperienceAreaWrapper >
-            <CurriculumVitaeText onClick={handleDownloadAction}>
-                {ExperienceAreaConfig.curriculumVitae}
-            </CurriculumVitaeText>
             <TitleText >
                 {ExperienceAreaConfig.title}
             </TitleText>
+            <CurriculumVitaeText onClick={handleDownloadAction}>
+                {ExperienceAreaConfig.curriculumVitae}
+            </CurriculumVitaeText>
             <SeparatorSpace />
             <TechnologyCardsWrapper>
                 <FlexContainer positionType={"space-around"}>

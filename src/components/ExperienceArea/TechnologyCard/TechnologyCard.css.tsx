@@ -1,9 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 import MoreIcon from "../../../assets/technologies/more_icon.png";
+import { Breakpoints, minWidthQuery } from "../../../utils/globals";
+
+export const SeparatorSpace = styled.div<{ paddingValue: number}>`
+    padding: 15rem;
+`;
 
 export const TechnologyCardContainer = styled.div`
     width: 17.5rem;
     height: 22.5rem;
+    margin: 1rem 0 1rem 0;
+
+    ${minWidthQuery(Breakpoints.nano)} {
+      margin: 1rem 0 1rem 0;
+    }
 `;
 
 // export const TechnologyCardMetadataWrapper = styled.div`
@@ -48,7 +58,6 @@ export const TechnologyCardTitle = styled.div`
 export const TechnologyCardWrapper = styled.div`
     width: 100%;
     height: 100%;
-    // margin: 0 1rem 0 1rem;
     position: relative;
     cursor: pointer;
     background-size: cover; 
