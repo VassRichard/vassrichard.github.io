@@ -10,6 +10,7 @@ export const LandingAreaWrapper = styled.div<{
     position: relative;
     background: url(${LandingAreaWallpaper}) center center;
     background-size: ${(props) => props.isSmallDevice ? 'cover' : 'contain'};
+    z-index: 1;
 `;
 
 export const DescriptionWrapper = styled.div`
