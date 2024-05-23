@@ -8,8 +8,8 @@ import { saveAs } from 'file-saver';
 export const ExperienceArea: FC = () => {
 
     const handleDownloadAction = () => {
-        const url = '../../assets/CV-VassRichard.pdf'
-        const fileName = "CV - Vass Richard.pdf"
+        const url = 'CV - Vass Richard.pdf';
+        const fileName = 'CV - Vass Richard.pdf';
 
         fetch(url)
         .then((response) => {
