@@ -29,6 +29,10 @@ export const TitleText = styled.div`
     ${minWidthQuery(Breakpoints.large)} {
         font-size: 2.5rem;
     }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 3rem;
+    }
 `;
 
 export const CurriculumVitaeText = styled.div`
@@ -63,7 +67,7 @@ export const CurriculumVitaeText = styled.div`
     }
 
     ${minWidthQuery(Breakpoints.large)} {
-        bottom: -5.5rem;
+        bottom: -5.70rem;
         margin: -0.25rem 0 0 0;
         font-size: 1rem;
     }
@@ -77,6 +81,10 @@ export const TechnologyCardsWrapper = styled.div`
 
     ${minWidthQuery(Breakpoints.small)} {
         margin: 0 10rem 0 10rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        margin: 5rem 15rem 0 15rem;
     }
 `;
 

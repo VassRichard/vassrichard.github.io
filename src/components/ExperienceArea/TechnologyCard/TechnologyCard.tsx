@@ -9,7 +9,7 @@ export type TechnologyCardType = {
 }
 
 export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
-    const [isMoreIconShown, setVisibility] = useState(false)
+    const [isMoreIconVisible, setVisibility] = useState(false)
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
@@ -37,7 +37,7 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
                 {/* <TechnologyCardMetadataWrapper> */}
                     <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
                     {/* <TechnologyCardDescription>{technology.description}</TechnologyCardDescription> */}
-                    {isMoreIconShown && <MoreIconWrapper />}
+                    <MoreIconWrapper isVisible={isMoreIconVisible}/>
                 {/* </TechnologyCardMetadataWrapper> */}
             </TechnologyCardWrapper>
         </TechnologyCardContainer>

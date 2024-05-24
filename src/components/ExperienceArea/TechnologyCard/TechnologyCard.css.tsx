@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import MoreIcon from "../../../assets/technologies/more_icon.png";
 import { Breakpoints, minWidthQuery } from "../../../utils/globals";
 
@@ -13,6 +13,11 @@ export const TechnologyCardContainer = styled.div`
 
     ${minWidthQuery(Breakpoints.nano)} {
       margin: 1rem 0 1rem 0;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+      width: 25rem;
+      height: 32.5rem;
     }
 `;
 
@@ -88,7 +93,18 @@ const fadeInSlideUp = keyframes`
   }
 `;
 
-export const MoreIconWrapper = styled.div`
+const fadeOutSlideDown = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+`;
+
+export const MoreIconWrapper = styled.div<{ isVisible: boolean }>`
     width: 2.5rem;
     height: 100%;
     margin: 0 auto;
@@ -99,6 +115,6 @@ export const MoreIconWrapper = styled.div`
     background-repeat: no-repeat;
     position: absolute;
     display: block;
-    opacity: 0; /* Start with the icon hidden */
-    animation: ${fadeInSlideUp} 0.5s forwards; /* Animation for appearance */
+    opacity: 0;
+    animation: ${(props) =>props.isVisible ? css`${fadeInSlideUp} 0.5s forwards` : css`${fadeOutSlideDown} 0.5s forwards`};
 `;
