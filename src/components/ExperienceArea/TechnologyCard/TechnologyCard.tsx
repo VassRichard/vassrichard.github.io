@@ -1,15 +1,18 @@
 import { FC, useState } from "react";
-import { TechnologyCardContainer, TechnologyCardTitle, TechnologyCardWrapper, TechnologyCardWallpaper, MoreIconWrapper } from './TechnologyCard.css';
+import { TechnologyCardContainer, TechnologyCardTitle, TechnologyCardWrapper, TechnologyCardWallpaper, TechnologyCardWallpaperOverlay, MoreIconWrapper } from './TechnologyCard.css';
 import { TechnologyConfigType } from "../../../utils/types";
 import { PopupExample } from "../../Pop-up/Pop-up";
-import 'reactjs-popup/dist/index.css';
+import { useGetScreenSize } from "../../../utils/resolutions";
 
 export type TechnologyCardType = {
     technology: TechnologyConfigType;
 }
 
 export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
-    const [isMoreIconVisible, setVisibility] = useState(false)
+    const { isMobile, isTablet } = useGetScreenSize();
+    const isSmallDevice = isMobile() || isTablet();
+
+    const [isHovered, setHover] = useState(false)
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
@@ -22,11 +25,11 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
 
 
     const onMouseEnter = () => {
-        setVisibility(true);
+        setHover(true);
     };
 
     const onMouseLeave = () => {
-        setVisibility(false);
+        setHover(false);
     };
 
     return (
@@ -34,10 +37,11 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
             <PopupExample isOpen={isPopupOpen} closePopup={closePopup} />
             <TechnologyCardWrapper onClick={openPopup}>
                 <TechnologyCardWallpaper wallpaper={technology.wallpaper} />
+                {!isSmallDevice && <TechnologyCardWallpaperOverlay isHovered={isHovered} />}
                 {/* <TechnologyCardMetadataWrapper> */}
                     <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
                     {/* <TechnologyCardDescription>{technology.description}</TechnologyCardDescription> */}
-                    <MoreIconWrapper isVisible={isMoreIconVisible}/>
+                    {!isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
                 {/* </TechnologyCardMetadataWrapper> */}
             </TechnologyCardWrapper>
         </TechnologyCardContainer>
