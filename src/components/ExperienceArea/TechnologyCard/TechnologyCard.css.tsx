@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import MoreIcon from "../../../assets/technologies/more_icon.png";
 import { Breakpoints, minWidthQuery } from "../../../utils/globals";
 
@@ -13,6 +13,11 @@ export const TechnologyCardContainer = styled.div`
 
     ${minWidthQuery(Breakpoints.nano)} {
       margin: 1rem 0 1rem 0;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+      width: 25rem;
+      height: 32.5rem;
     }
 `;
 
@@ -41,6 +46,12 @@ export const TechnologyCardTitle = styled.div`
     font-family: 'Aspekta', sans-serif;
     text-align: start;
     align-items: center;
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+      top: 1.4rem;
+      left: 1.4rem;
+      font-size: 1.5rem;
+    }
 `;
 
 // export const TechnologyCardDescription = styled.div`
@@ -77,6 +88,32 @@ export const TechnologyCardWallpaper = styled.div<{ wallpaper: string }>`
     cursor: pointer;
 `;
 
+const overlayFadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+`;
+
+const overlayFadeOut = keyframes`
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
+
+export const TechnologyCardWallpaperOverlay = styled.div<{ isHovered: boolean }>`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    animation: ${(props) => props.isHovered ? css`${overlayFadeIn} 0.5s forwards` : css`${overlayFadeOut} 0.5s forwards`};
+`;
+
 const fadeInSlideUp = keyframes`
   from {
     opacity: 0;
@@ -88,17 +125,26 @@ const fadeInSlideUp = keyframes`
   }
 `;
 
-export const MoreIconWrapper = styled.div`
+const fadeOutSlideDown = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+`;
+
+export const MoreIconWrapper = styled.div<{ isHovered: boolean }>`
     width: 2.5rem;
-    height: 100%;
-    margin: 0 auto;
-    left: 42.5%; 
+    height: 2.5rem;
+    top: 50%;
+    left: 45%;
+    position: absolute;
     background-image: url(${MoreIcon});
     background-size: contain; 
     background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    display: block;
-    opacity: 0; /* Start with the icon hidden */
-    animation: ${fadeInSlideUp} 0.5s forwards; /* Animation for appearance */
+    background-repeat: no-repeat;    
+    animation: ${(props) => props.isHovered ? css`${fadeInSlideUp} 0.5s forwards` : css`${fadeOutSlideDown} 0.5s forwards`};
 `;

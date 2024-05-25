@@ -6,7 +6,7 @@ export const SeparatorSpace = styled.div`
 `;
 
 export const ExperienceAreaWrapper = styled.div`
-    height: 100vh;
+    margin: 3.5rem;
     background-color: #FFFFFF;
 `;
 
@@ -29,15 +29,19 @@ export const TitleText = styled.div`
     ${minWidthQuery(Breakpoints.large)} {
         font-size: 2.5rem;
     }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 3rem;
+    }
 `;
 
 export const CurriculumVitaeText = styled.div`
-    margin: 0 2.5rem 0 2.5rem;
     padding: 1rem 3rem 1rem 3rem;
     position: relative;
     background-color: black;
     border-radius: 1.5rem;
     color: white;
+    font-size: 0.65rem;
     text-align: center;
     letter-spacing: 0.1rem;
     cursor: pointer;
@@ -46,24 +50,25 @@ export const CurriculumVitaeText = styled.div`
     ${minWidthQuery(Breakpoints.nano)} {
         bottom: 0;
         right: 0;
+        margin: 0 1rem 0 1rem;
         position: relative;
         text-align: center;
     }
 
     ${minWidthQuery(Breakpoints.small)} {
-        margin: 0 15rem 0 15rem;
-    }
-
-    ${minWidthQuery(Breakpoints.mediumExtra)} {
-        bottom: -5rem;
-        right: 2.5rem;
-        margin: 0;
-        position: absolute;
+        margin: 0 10rem 0 10rem;
         font-size: 0.75rem;
     }
 
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        bottom: -6rem;
+        right: 2.5rem;
+        margin: 0;
+        position: absolute;
+    }
+
     ${minWidthQuery(Breakpoints.large)} {
-        bottom: -5.5rem;
+        bottom: -6.5rem;
         margin: -0.25rem 0 0 0;
         font-size: 1rem;
     }
@@ -72,11 +77,15 @@ export const CurriculumVitaeText = styled.div`
 export const TechnologyCardsWrapper = styled.div`
 
     ${minWidthQuery(Breakpoints.nano)} {
-        margin: 0 5rem 0 5rem;
+        margin: 0 1.5rem 0 1.5rem;
     }
 
     ${minWidthQuery(Breakpoints.small)} {
-        margin: 0 10rem 0 10rem;
+        margin: 0 7.5rem 0 7.5rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        margin: 0 15rem 0 15rem;
     }
 `;
 

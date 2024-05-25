@@ -77,10 +77,14 @@ export const RoleWrapper = styled.div`
     ${minWidthQuery(Breakpoints.large)} {
         width: 63.25%;
     }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 2.5rem;
+    }
 `;
 
 export const FirstLine = styled.div`
-    text-align: left;
+    text-align: left; 
 `;
 
 export const SecondLine = styled.div`
@@ -121,5 +125,9 @@ export const RoleDescription = styled.div`
 
     ${minWidthQuery(Breakpoints.large)} {
         font-size: 0.9rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 1rem;
     }
 `;
