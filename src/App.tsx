@@ -2,14 +2,14 @@ import React from "react";
 import './App.css';
 import { LandingArea } from './components/LandingArea/LandingArea';
 import { ExperienceArea } from './components/ExperienceArea/ExperienceArea';
-import { UnderDevelopmentArea } from './components/UnderDevelopmentArea/UnderDevelopmentArea';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   return (
     <React.Fragment>
       <LandingArea />
       <ExperienceArea />
-      <UnderDevelopmentArea />
+      <Footer />
     </React.Fragment>
   );
 }
