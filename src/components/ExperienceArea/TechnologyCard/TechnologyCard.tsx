@@ -1,8 +1,9 @@
 import { FC, useState } from "react";
-import { TechnologyCardContainer, TechnologyCardTitle, TechnologyCardWrapper, TechnologyCardWallpaper, TechnologyCardWallpaperOverlay, MoreIconWrapper } from './TechnologyCard.css';
+import { TechnologyCardContainer, TechnologyCardMetadataWrapper, TechnologyCardTitle, TechnologyCardDescription, TechnologyCardWrapper, TechnologyCardWallpaper, TechnologyCardWallpaperOverlay, MoreIconWrapper } from './TechnologyCard.css';
 import { TechnologyConfigType } from "../../../utils/types";
 import { PopupExample } from "../../Pop-up/Pop-up";
 import { useGetScreenSize } from "../../../utils/resolutions";
+import { SeparatorMargin } from "../../General/GeneralComponents.css";
 
 export type TechnologyCardType = {
     technology: TechnologyConfigType;
@@ -38,11 +39,12 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
             <TechnologyCardWrapper onClick={openPopup}>
                 <TechnologyCardWallpaper wallpaper={technology.wallpaper} />
                 {!isSmallDevice && <TechnologyCardWallpaperOverlay isHovered={isHovered} />}
-                {/* <TechnologyCardMetadataWrapper> */}
+                <TechnologyCardMetadataWrapper>
                     <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
-                    {/* <TechnologyCardDescription>{technology.description}</TechnologyCardDescription> */}
-                    {!isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
-                {/* </TechnologyCardMetadataWrapper> */}
+                    <SeparatorMargin value={0.1}/>
+                    <TechnologyCardDescription>{technology.description}</TechnologyCardDescription>
+                </TechnologyCardMetadataWrapper>
+                {!isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
             </TechnologyCardWrapper>
         </TechnologyCardContainer>
     )
