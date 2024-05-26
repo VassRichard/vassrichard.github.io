@@ -22,5 +22,6 @@ export type ExperienceAreaConfigType = {
 export type TechnologyConfigType = {
     title: string;
     wallpaper: string;
+    summary: string;
     description: string;
 }

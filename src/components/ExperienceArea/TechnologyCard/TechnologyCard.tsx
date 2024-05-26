@@ -35,14 +35,14 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
 
     return (
         <TechnologyCardContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-            <PopupExample isOpen={isPopupOpen} closePopup={closePopup} />
+            <PopupExample technology={technology} isOpen={isPopupOpen} closePopup={closePopup} />
             <TechnologyCardWrapper onClick={openPopup}>
                 <TechnologyCardWallpaper wallpaper={technology.wallpaper} />
                 {!isSmallDevice && <TechnologyCardWallpaperOverlay isHovered={isHovered} />}
                 <TechnologyCardMetadataWrapper>
                     <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
                     <SeparatorMargin value={0.1}/>
-                    <TechnologyCardDescription>{technology.description}</TechnologyCardDescription>
+                    <TechnologyCardDescription>{technology.summary}</TechnologyCardDescription>
                 </TechnologyCardMetadataWrapper>
                 {!isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
             </TechnologyCardWrapper>
