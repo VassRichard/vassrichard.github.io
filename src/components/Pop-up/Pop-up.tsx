@@ -25,6 +25,7 @@ export const PopupExample : React.FC<PopupExampleProps> = ({ technology, isOpen,
           <CloseButton onClick={closePopup}>&times;</CloseButton>
           <h2>{technology.title}</h2>
           <p>{technology.description}</p>
+          <h2>UNDER DEVELOPMENT</h2>
           {/* <h3>Skills</h3> */}
           {/* <JokeButton>
             Reveal pun */}

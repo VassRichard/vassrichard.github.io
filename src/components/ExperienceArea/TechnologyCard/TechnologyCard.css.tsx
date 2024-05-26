@@ -39,6 +39,10 @@ export const TechnologyCardDescription = styled.div`
     width: 100%;
     font-size: 0.85rem;
     font-weight: 50;
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+      font-size: 1rem;
+    }
 `;
 
 export const TechnologyCardWrapper = styled.div`

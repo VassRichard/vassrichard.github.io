@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { SeparatorSpace, ExperienceAreaWrapper, TitleText, CurriculumVitaeText, TechnologyCardsWrapper, FlexContainer } from './ExperienceArea.css';
+import { ExperienceAreaWrapper, TitleText, CurriculumVitaeText, TechnologyCardsWrapper, FlexContainer } from './ExperienceArea.css';
 import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
 import { TechnologyCard } from './TechnologyCard/TechnologyCard';
 import { saveAs } from 'file-saver';
+import { SeparatorPadding } from "../General/GeneralComponents.css";
 
 export const ExperienceArea: FC = () => {
 
@@ -35,7 +36,7 @@ export const ExperienceArea: FC = () => {
             <CurriculumVitaeText onClick={handleDownloadAction}>
                 {ExperienceAreaConfig.curriculumVitae}
             </CurriculumVitaeText>
-            <SeparatorSpace />
+            <SeparatorPadding value={1.5} />
             <TechnologyCardsWrapper>
                 <FlexContainer positionType={"space-around"}>
                         {TechnologyConfig.map((technology: TechnologyConfigType) => {
