@@ -12,7 +12,3 @@ export const FooterContainer = styled.div`
 export const FooterCopyright = styled.div`
     text-align: center;
 `;
-
-export const FooterCopyrightText = styled.a`
-
-`;
