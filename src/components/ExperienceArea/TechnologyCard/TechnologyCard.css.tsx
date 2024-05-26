@@ -20,37 +20,25 @@ export const TechnologyCardContainer = styled.div`
 export const TechnologyCardMetadataWrapper = styled.div`
     padding: 0.75rem;
     position: relative;
+    color: white;
 `;
 
 export const TechnologyCardTitle = styled.div`
     width: 100%;
-    // top: 1rem;
-    // left: 1rem;
-    // position: relative;
-    color: white;
     font-size: 1.1rem;
     font-family: 'Aspekta', sans-serif;
     text-align: start;
     align-items: center;
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
-      // top: 1.4rem;
-      // left: 1.4rem;
       font-size: 1.5rem;
     }
 `;
 
 export const TechnologyCardDescription = styled.div`
     width: 100%;
-    top: 2.75rem;
-    // padding: 0 1rem 0 1rem;
-    // position: absolute;
-    color: white;
     font-size: 0.85rem;
     font-weight: 50;
-    // font-family: 'Aspekta', sans-serif;
-    // text-align: start;
-    // align-items: center;
 `;
 
 export const TechnologyCardWrapper = styled.div`
