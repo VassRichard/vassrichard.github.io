@@ -24,38 +24,27 @@ export const TechnologyConfig: TechnologyConfigType[] = [
     {
         title: "Mobile development",
         wallpaper: Mobile,
-        description: "Building apps that are smooth, sleek, and oh-so-simple to use."
+        summary: "Building apps that are smooth, sleek, and oh-so-simple to use.",
+        description: "My Android journey began tentatively in 2019, but it wasn't until 2020 that I truly immersed myself in it. " +
+        "Since then, I've delved deep into Java and Kotlin, crafting several apps along the way. With each project, I've refined my skills and developed a passion for " +
+        "creating intuitive and impactful mobile experiences."
     },
     {
         title: "Web development",
         wallpaper: Web,
-        description: "Making websites that look good and do cool things."
+        summary: "Making websites that look good and do cool things.",
+        description: "My web development journey began in 2017, but I set it aside for a while. Now, in 2024, I've reignited my passion for it and embarked on a journey " +
+        "to learn and master the craft once more. With a renewed enthusiasm, I'm eager to explore the latest technologies and create engaging web experiences."
     },
     {
         title: "Machine learning",
         wallpaper: MachineLearning,
-        description: "Using data to solve problems and make life easier."
+        summary: "Using data to solve problems and make life easier.",
+       description: "My journey with machine learning started with my bachelor's thesis, where I developed a tool for detecting broken and intact objects. " +
+       "Although I've always had ideas for further exploration, I lacked the time to pursue them fully. Now, with some free time on my hands, I'm diving back " +
+       "into the world of machine learning, whether it's through reading or working on new projects."
     }
 ];
-
-
-// export const TechnologyConfig: TechnologyConfigType[] = [
-//     {
-//         title: "MOBILE",
-//         wallpaper: Mobile,
-//         description: "TEST"
-//     },
-//     {
-//         title: "WEB",
-//         wallpaper: Web,
-//         description: "TEST"
-//     },
-//     {
-//         title: "MACHINE LEARNING",
-//         wallpaper: MachineLearning,
-//         description: "TEST"
-//     }
-// ];
 
 export const ExperienceAreaConfig: ExperienceAreaConfigType = {
     title: "TECH STACK & EXPERTISE",

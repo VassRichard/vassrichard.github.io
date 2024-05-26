@@ -1,12 +1,14 @@
 import React from 'react';
-import { ModalBackground, ModalContainer, CloseButton } from './Pop-up.css';
+import { ModalBackground, ModalContainer, CloseButton, JokeButton } from './Pop-up.css';
+import { TechnologyConfigType } from "../../utils/types";
 
 type PopupExampleProps = {
+  technology: TechnologyConfigType;
   isOpen: boolean;
   closePopup: () => void;
 };
 
-export const PopupExample : React.FC<PopupExampleProps> = ({ isOpen, closePopup }) => {
+export const PopupExample : React.FC<PopupExampleProps> = ({ technology, isOpen, closePopup }) => {
 
   const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -21,8 +23,13 @@ export const PopupExample : React.FC<PopupExampleProps> = ({ isOpen, closePopup 
       <ModalBackground onClick={handleBackgroundClick}>
         <ModalContainer>
           <CloseButton onClick={closePopup}>&times;</CloseButton>
+          <h2>{technology.title}</h2>
+          <p>{technology.description}</p>
           <h2>UNDER DEVELOPMENT</h2>
-          <p>Don't you worry, you'll be able to look at it soon.</p>
+          {/* <h3>Skills</h3> */}
+          {/* <JokeButton>
+            Reveal pun */}
+          {/* </JokeButton> */}
         </ModalContainer>
       </ModalBackground>
     </React.Fragment>

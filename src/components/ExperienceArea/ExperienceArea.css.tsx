@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { Breakpoints, minWidthQuery } from "../../utils/globals";
 
-export const SeparatorSpace = styled.div`
-    padding: 1.5rem;
-`;
-
 export const ExperienceAreaWrapper = styled.div`
     margin: 3.5rem;
     background-color: #FFFFFF;
@@ -14,24 +10,29 @@ export const TitleText = styled.div`
     width: 100%;
     margin: 2.5rem 0 2.5rem 0;
     text-align: center;
+    font-size: 1.5rem;
     font-family: 'Aspekta', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     letter-spacing: 0.05rem;
 
     ${minWidthQuery(Breakpoints.nano)} {
         font-size: 1.5rem;
     }
 
-    ${minWidthQuery(Breakpoints.mediumExtra)} {
+    ${minWidthQuery(Breakpoints.nano)} {
         font-size: 1.75rem;
     }
 
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        font-size: 2rem;
+    }
+
     ${minWidthQuery(Breakpoints.large)} {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 `;
 
@@ -65,11 +66,17 @@ export const CurriculumVitaeText = styled.div`
         right: 2.5rem;
         margin: 0;
         position: absolute;
+        font-size: 0.6rem;
     }
 
     ${minWidthQuery(Breakpoints.large)} {
-        bottom: -6.5rem;
-        margin: -0.25rem 0 0 0;
+        bottom: -6.6rem;
+        padding: 1rem 3rem 1rem 3rem;
+        font-size: 0.75rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        bottom: -7rem;
         font-size: 1rem;
     }
 `;
