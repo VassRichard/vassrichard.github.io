@@ -114,7 +114,7 @@ export const SeparatorSpace = styled.div<{ marginValue: number }>`
 
 export const RoleDescription = styled.div`
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 1.5rem;    
     font-size: 0.9rem;
     font-weight: 50;
 
