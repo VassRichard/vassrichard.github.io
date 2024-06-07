@@ -9,8 +9,8 @@ import { SeparatorPadding } from "../General/GeneralComponents.css";
 export const ExperienceArea: FC = () => {
 
     const handleDownloadAction = () => {
-        const url = 'CV - Vass Richard.pdf';
-        const fileName = 'CV - Vass Richard.pdf';
+        const url = 'CV - Vass Richard-Daniel.pdf';
+        const fileName = 'CV - Vass Richard-Daniel.pdf';
 
         fetch(url)
         .then((response) => {
