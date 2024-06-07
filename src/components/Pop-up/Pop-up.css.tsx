@@ -29,13 +29,10 @@ export const ModalContainer = styled.div`
 `;
 
 export const CloseButton = styled.div`
-    background: none;
-    border: none;
+    width: 1rem;
+    margin-left: auto;
     font-size: 1.5rem;
-    top: 1rem;
-    right: 1rem;
     cursor: pointer;
-    color: #333;
 `;
 
 export const JokeButton = styled.div`

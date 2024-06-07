@@ -23,27 +23,25 @@ export const LandingAreaConfig: LandingAreaConfigType = {
 export const TechnologyConfig: TechnologyConfigType[] = [
     {
         title: "Mobile development",
+        isEnabled: false,
         wallpaper: Mobile,
         summary: "Building apps that are smooth, sleek, and oh-so-simple to use.",
-        description: "My Android journey began tentatively in 2019, but it wasn't until 2020 that I truly immersed myself in it. " +
-        "Since then, I've delved deep into Java and Kotlin, crafting several apps along the way. With each project, I've refined my skills and developed a passion for " +
-        "creating intuitive and impactful mobile experiences."
-    },
+        description: "My Android adventure began and took full flight 5 years ago. Proficient in Java and Kotlin, I've build a few apps from scratch and Android still continues to be my key focus and passion."
+        },
     {
         title: "Web development",
+        isEnabled: false,
         wallpaper: Web,
         summary: "Making websites that look good and do cool things.",
-        description: "My web development journey began in 2017, but I set it aside for a while. Now, in 2024, I've reignited my passion for it and embarked on a journey " +
-        "to learn and master the craft once more. With a renewed enthusiasm, I'm eager to explore the latest technologies and create engaging web experiences."
-    },
+        description: "I've recently returned to web development, eager to unravel the endless opportunities it offers and bring the same quality to web as I deliver on mobile."
+        },
     {
         title: "Machine learning",
+        isEnabled: false,
         wallpaper: MachineLearning,
         summary: "Using data to solve problems and make life easier.",
-       description: "My journey with machine learning started with my bachelor's thesis, where I developed a tool for detecting broken and intact objects. " +
-       "Although I've always had ideas for further exploration, I lacked the time to pursue them fully. Now, with some free time on my hands, I'm diving back " +
-       "into the world of machine learning, whether it's through reading or working on new projects."
-    }
+       description: "Machine learning always fantasized me, there are just too many solutions it has to offer to humankind besides some pixels on a screen and I'm picking up the pace."
+        }
 ];
 
 export const ExperienceAreaConfig: ExperienceAreaConfigType = {

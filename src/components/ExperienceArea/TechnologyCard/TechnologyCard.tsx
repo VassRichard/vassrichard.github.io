@@ -17,7 +17,7 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
-        setIsPopupOpen(true);
+        setIsPopupOpen(technology.isEnabled && true);
       };
     
       const closePopup = () => {
@@ -44,7 +44,7 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
                     <SeparatorMargin value={0.1}/>
                     <TechnologyCardDescription>{technology.summary}</TechnologyCardDescription>
                 </TechnologyCardMetadataWrapper>
-                {!isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
+                {technology.isEnabled && !isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
             </TechnologyCardWrapper>
         </TechnologyCardContainer>
     )
