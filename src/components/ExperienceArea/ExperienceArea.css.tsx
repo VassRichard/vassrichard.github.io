@@ -36,9 +36,23 @@ export const TitleText = styled.div`
     }
 `;
 
+export const Wrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+
+    ${minWidthQuery(Breakpoints.nano)} {
+        grid-template-columns: 1fr;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        grid-template-columns: 1fr 2.75fr 1fr;
+    }
+`;
+
 export const CurriculumVitaeText = styled.div`
-    padding: 1rem 3rem 1rem 3rem;
-    position: relative;
+    padding: 1rem 1rem 1rem 1rem;
     background-color: black;
     border-radius: 1.5rem;
     color: white;
@@ -48,35 +62,23 @@ export const CurriculumVitaeText = styled.div`
     cursor: pointer;
     user-select: none;
 
-    ${minWidthQuery(Breakpoints.nano)} {
-        bottom: 0;
-        right: 0;
-        margin: 0 1rem 0 1rem;
-        position: relative;
-        text-align: center;
-    }
-
     ${minWidthQuery(Breakpoints.small)} {
         margin: 0 10rem 0 10rem;
-        font-size: 0.75rem;
     }
 
     ${minWidthQuery(Breakpoints.mediumExtra)} {
-        bottom: -6rem;
-        right: 2.5rem;
         margin: 0;
-        position: absolute;
-        font-size: 0.6rem;
+        padding: 1rem 0rem 1rem 0rem;
     }
 
     ${minWidthQuery(Breakpoints.large)} {
-        bottom: -6.6rem;
-        padding: 1rem 3rem 1rem 3rem;
-        font-size: 0.75rem;
+        margin: 0 2rem 0 2rem;
+        padding: 1rem 2rem 1rem 2rem;
     }
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
-        bottom: -7rem;
+        margin: 0 2rem 0 2rem;
+        padding: 1rem 0 1rem 0;
         font-size: 1rem;
     }
 `;
