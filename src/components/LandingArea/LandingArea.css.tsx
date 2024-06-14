@@ -35,6 +35,11 @@ export const FlexContainer = styled.div`
         margin: 0 10rem 0 10rem;
         padding: 1.45rem 0 1.45rem 0;
     }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        margin: 0 15rem 0 15rem;
+        padding: 1.45rem 0 1.45rem 0;
+    }
 `
 
 export const DescriptionWrapper = styled.div`
@@ -49,6 +54,9 @@ export const DescriptionWrapper = styled.div`
         padding: 10rem 0 10rem 0rem;
     }
 
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        padding: 17.5rem 0 17.5rem 0rem;
+    }
 `;
 
 export const DefaultDescriptionText = styled.div`
@@ -73,6 +81,12 @@ export const DefaultDescriptionText = styled.div`
         font-weight: 50;
         letter-spacing: 0.1rem;
     }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 1.5rem;
+        font-weight: 50;
+        letter-spacing: 0.1rem;
+    }
 `
 
 export const DescriptionText = styled.div`
@@ -89,10 +103,13 @@ export const DescriptionText = styled.div`
     }
 
     ${minWidthQuery(Breakpoints.mediumExtra)} {
-        font-family: 'Aspekta', sans-serif;
         font-size: 2.5rem;
         font-weight: 750;
         letter-spacing: 0.15rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: 3rem;
     }
 `
 
@@ -128,6 +145,12 @@ export const PersonWrapper = styled.div`
         width: 35rem;
         height: 27.5rem;
         top: 1.5rem;
+    }
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        width: 45rem;
+        height: 40rem;
+        top: 5.1rem;
     }
 `;
 
