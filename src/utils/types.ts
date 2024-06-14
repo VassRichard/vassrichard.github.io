@@ -1,15 +1,10 @@
 // LANDING AREA
 
 export type LandingAreaConfigType = {
-    roleText: RoleConfigType;
-    introText: string;
-    outroText: string;
+    greetingText: string;
+    nameText: string;
+    locationText: string;
 };
-
-export type RoleConfigType = {
-    firstText: string;
-    secondText: string;
-}
 
 // EXPERIENCE AREA
 

@@ -1,95 +1,134 @@
 import styled from 'styled-components';
-import LandingAreaWallpaper from '../../assets/LandingArea.jpeg';
 import PersonImage from '../../assets/PersonImage.png';
 import { Breakpoints, minWidthQuery } from "../../utils/globals";
 
-export const LandingAreaWrapper = styled.div<{
-    isSmallDevice: boolean;
-}>`
-    height: 100vh;
-    position: relative;
-    background: url(${LandingAreaWallpaper}) center center;
-    background-size: ${(props) => props.isSmallDevice ? 'cover' : 'contain'};
-    z-index: 1;
+export const LandingAreaWrapper = styled.div`
+    height: auto;
+    background: #000101 center center;
 `;
 
-export const DescriptionWrapper = styled.div`
-    top: 17.5%;
-    position: absolute;
-    left: 5%;
-    right: 5%;
-    color: White;
+export const FlexContainer = styled.div`
+    height: 100%;
+    margin: 0;
+    padding: 2.5rem 0 2.5rem 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
     ${minWidthQuery(Breakpoints.nano)} {
-        width: 90%;
+        margin: 0;
+        padding: 2.5rem 0 2.5rem 0;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
-        width: 30%;
-        left: 5%;
+        margin: 0 2.5rem 0 2.5rem;
+        padding: 0;
     }
 
     ${minWidthQuery(Breakpoints.mediumExtra)} {
-        width: 35%;
+        margin: 0 5rem 0 5rem;
+        padding: 0;
+    }
+
+    ${minWidthQuery(Breakpoints.large)} {
+        margin: 0 10rem 0 10rem;
+        padding: 1.45rem 0 1.45rem 0;
+    }
+`
+
+export const DescriptionWrapper = styled.div`
+    padding: 3.5rem 0 3.5rem 0;
+    color: white;
+
+    ${minWidthQuery(Breakpoints.nano)} {
+        padding: 5rem 0 5rem 0;
+    }
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        padding: 10rem 0 10rem 0rem;
     }
 
 `;
 
+export const DefaultDescriptionText = styled.div`
+    font-size: 1rem;
+    font-weight: 50;
+    letter-spacing: 0.1rem;
+
+    ${minWidthQuery(Breakpoints.nano)} {
+        font-size: 1rem;
+        font-weight: 50;
+        letter-spacing: 0.1rem;
+    }
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        font-size: 0.75rem;
+        font-weight: 50;
+        letter-spacing: 0.1rem;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        font-size: 1rem;
+        font-weight: 50;
+        letter-spacing: 0.1rem;
+    }
+`
+
+export const DescriptionText = styled.div`
+    font-family: 'Aspekta', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 750;
+    letter-spacing: 0.15rem;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        font-family: 'Aspekta', sans-serif;
+        font-size: 2rem;
+        font-weight: 750;
+        letter-spacing: 0.1rem;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        font-family: 'Aspekta', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 750;
+        letter-spacing: 0.15rem;
+    }
+`
+
 export const PersonWrapper = styled.div`
-    height: 39vh;
+    width: 25rem;
+    height: 20rem;
+    top: 2.6rem;
     position: relative;
-    top: 61%;
     opacity: 0.75;
     background: url(${PersonImage}) center center;
     background-size: contain;
     background-repeat: no-repeat;
 
     ${minWidthQuery(Breakpoints.nano)} {
-        height: 39vh;
-        top: 61%;
+        width: 25rem;
+        height: 20rem;
+        top: 2.6rem;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
-        height: 80vh;
-        top: 20%;
-        margin: 0 0 0 5.5rem;
+        width: 25rem;
+        height: 20rem;
+        top: 4.5rem;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        width: 27.5rem;
+        height: 22.5rem;
+        top: 3.25rem;
     }
 
     ${minWidthQuery(Breakpoints.large)} {
-        height: 85vh;
-        top: 15%;
+        width: 35rem;
+        height: 27.5rem;
+        top: 1.5rem;
     }
-`;
-
-export const RoleWrapper = styled.div`
-    font-size: 2rem;
-    font-family: 'Aspekta', sans-serif;
-    letter-spacing: 0.15rem;
-
-    ${minWidthQuery(Breakpoints.nano)} {
-        width: 100%;
-    }
-
-    ${minWidthQuery(Breakpoints.medium)} {
-        width: 88.75%;
-    }
-
-    ${minWidthQuery(Breakpoints.large)} {
-        width: 63.25%;
-    }
-
-    ${minWidthQuery(Breakpoints.xxLarge)} {
-        font-size: 2.5rem;
-    }
-`;
-
-export const FirstLine = styled.div`
-    text-align: left; 
-`;
-
-export const SecondLine = styled.div`
-    text-align: right;
-    font-weight: bold;
 `;
 
 export const Separator = styled.div`
@@ -105,29 +144,5 @@ export const Separator = styled.div`
 
     ${minWidthQuery(Breakpoints.medium)} {
         width: 50%;
-    }
-`;
-
-export const SeparatorSpace = styled.div<{ marginValue: number }>`
-    margin: ${(props) => props.marginValue}rem;
-`;
-
-export const RoleDescription = styled.div`
-    text-align: center;
-    line-height: 1.5rem;    
-    font-size: 0.9rem;
-    font-weight: 50;
-
-    ${minWidthQuery(Breakpoints.medium)} {
-        font-size: 0.75rem;
-        text-align: start;
-    }
-
-    ${minWidthQuery(Breakpoints.large)} {
-        font-size: 0.9rem;
-    }
-
-    ${minWidthQuery(Breakpoints.xxLarge)} {
-        font-size: 1rem;
     }
 `;
