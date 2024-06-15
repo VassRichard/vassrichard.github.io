@@ -6,6 +6,20 @@ export const ExperienceAreaWrapper = styled.div`
     background-color: #FFFFFF;
 `;
 
+export const HeadlineWrapper = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+
+    ${minWidthQuery(Breakpoints.nano)} {
+        grid-template-columns: 1fr;
+    }
+
+    ${minWidthQuery(Breakpoints.mediumExtra)} {
+        grid-template-columns: 1fr 2.75fr 1fr;
+    }
+`;
+
 export const TitleText = styled.div`
     width: 100%;
     margin: 2.5rem 0 2.5rem 0;
@@ -33,21 +47,6 @@ export const TitleText = styled.div`
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
         font-size: 3.5rem;
-    }
-`;
-
-export const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    width: 100%;
-
-    ${minWidthQuery(Breakpoints.nano)} {
-        grid-template-columns: 1fr;
-    }
-
-    ${minWidthQuery(Breakpoints.mediumExtra)} {
-        grid-template-columns: 1fr 2.75fr 1fr;
     }
 `;
 
