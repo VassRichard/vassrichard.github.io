@@ -22,7 +22,6 @@ export const HeadlineWrapper = styled.div`
 
 export const TitleText = styled.div`
     width: 100%;
-    margin: 2.5rem 0 2.5rem 0;
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Aspekta', sans-serif;
@@ -52,6 +51,7 @@ export const TitleText = styled.div`
 
 export const CurriculumVitaeText = styled.div`
     padding: 1rem 1rem 1rem 1rem;
+    margin: 2.5rem 0 0 0;
     background-color: black;
     border-radius: 1.5rem;
     color: white;
@@ -62,7 +62,7 @@ export const CurriculumVitaeText = styled.div`
     user-select: none;
 
     ${minWidthQuery(Breakpoints.small)} {
-        margin: 0 10rem 0 10rem;
+        margin: 1rem 10rem 0 10rem;
     }
 
     ${minWidthQuery(Breakpoints.mediumExtra)} {
