@@ -1,7 +1,9 @@
-import { LandingAreaConfigType, ExperienceAreaConfigType, TechnologyConfigType } from "../utils/types";
+import { LandingAreaConfigType, ExperienceAreaConfigType, TechnologyConfigType, SocialMediaConfigType } from "../utils/types";
 import Mobile from "../assets/technologies/mobile.jpg";
 import Web from "../assets/technologies/web.jpg";
 import MachineLearning from "../assets/technologies/machine_learning.jpg";
+import LinkedIn from "../assets/social/linkedin.svg";
+import Github from "../assets/social/github.svg";
 
 // LANDING AREA
 
@@ -42,3 +44,18 @@ export const ExperienceAreaConfig: ExperienceAreaConfigType = {
     curriculumVitae: "DOWNLOAD CV",
     technologies: TechnologyConfig,
 };
+
+// SOCIAL MEDIA
+
+export const SocialMediaConfig: SocialMediaConfigType[] = [
+    {
+        id: "linkedin",
+        icon: LinkedIn,
+        url: "https://www.linkedin.com/in/richard-daniel-vass-8829621b1/",
+    },
+    {
+        id: "medium",
+        icon: Github,
+        url: "https://github.com/VassRichard",
+    }
+];

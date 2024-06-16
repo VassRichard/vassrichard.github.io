@@ -1,32 +1,12 @@
 import { FC } from "react";
-import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, CurriculumVitaeText, TechnologyCardsWrapper, FlexContainer } from './ExperienceArea.css';
+import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, TechnologyCardsWrapper } from './ExperienceArea.css';
+import { FlexContainer } from '../General/GeneralComponents.css';
 import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
 import { TechnologyCard } from './TechnologyCard/TechnologyCard';
-import { saveAs } from 'file-saver';
 import { SeparatorPadding } from "../General/GeneralComponents.css";
 
 export const ExperienceArea: FC = () => {
-
-    const handleDownloadAction = () => {
-        const url = 'CV - Vass Richard-Daniel.pdf';
-        const fileName = 'CV - Vass Richard-Daniel.pdf';
-
-        fetch(url)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Failed to download file");
-            }
-
-            return response.blob();
-        })
-        .then((blob) => {
-            saveAs(blob, fileName);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    };
 
     return (
         <ExperienceAreaWrapper >
@@ -35,9 +15,6 @@ export const ExperienceArea: FC = () => {
                 <TitleText >
                     {ExperienceAreaConfig.title}
                 </TitleText>
-                <CurriculumVitaeText onClick={handleDownloadAction}>
-                    {ExperienceAreaConfig.curriculumVitae}
-                </CurriculumVitaeText>
             </HeadlineWrapper>
             <SeparatorPadding value={1.5} />
             <TechnologyCardsWrapper>

@@ -49,39 +49,6 @@ export const TitleText = styled.div`
     }
 `;
 
-export const CurriculumVitaeText = styled.div`
-    padding: 1rem 1rem 1rem 1rem;
-    margin: 2.5rem 0 0 0;
-    background-color: black;
-    border-radius: 1.5rem;
-    color: white;
-    font-size: 0.65rem;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-    user-select: none;
-
-    ${minWidthQuery(Breakpoints.small)} {
-        margin: 1rem 10rem 0 10rem;
-    }
-
-    ${minWidthQuery(Breakpoints.mediumExtra)} {
-        margin: 0;
-        padding: 1rem 0rem 1rem 0rem;
-    }
-
-    ${minWidthQuery(Breakpoints.large)} {
-        margin: 0 2rem 0 2rem;
-        padding: 1rem 2rem 1rem 2rem;
-    }
-
-    ${minWidthQuery(Breakpoints.xxLarge)} {
-        margin: 0 2rem 0 2rem;
-        padding: 1rem 0 1rem 0;
-        font-size: 1rem;
-    }
-`;
-
 export const TechnologyCardsWrapper = styled.div`
 
     ${minWidthQuery(Breakpoints.nano)} {
@@ -95,10 +62,4 @@ export const TechnologyCardsWrapper = styled.div`
     ${minWidthQuery(Breakpoints.xxLarge)} {
         margin: 0 15rem 0 15rem;
     }
-`;
-
-export const FlexContainer = styled.div<{ positionType: string }>`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: ${(props) => props.positionType};
 `;
