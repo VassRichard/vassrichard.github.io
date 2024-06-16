@@ -21,3 +21,11 @@ export type TechnologyConfigType = {
     summary: string;
     description: string;
 }
+
+// SOCIAL MEDIA
+
+export type SocialMediaConfigType = {
+    id: string;
+    icon: string;
+    url: string;
+};

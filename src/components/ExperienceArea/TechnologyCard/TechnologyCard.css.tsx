@@ -49,7 +49,7 @@ export const TechnologyCardWrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    cursor: pointer;
+    // cursor: pointer;
     background-size: cover; 
     background-position: center;
     transition: filter 0.3s ease-in-out;

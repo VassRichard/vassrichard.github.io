@@ -6,7 +6,8 @@ export const Footer: FC = () => {
     return (
         <FooterContainer >
             <FooterCopyright>
-                Copyright&nbsp;&copy; {new Date().getFullYear()}&nbsp;Vass Richard. All rights reserved.
+                &nbsp;&copy; Vass Richard {new Date().getFullYear()}&nbsp;
+                {/* Copyright&nbsp;&copy; {new Date().getFullYear()}&nbsp;Vass Richard */}
             </FooterCopyright>
         </FooterContainer>
     )
