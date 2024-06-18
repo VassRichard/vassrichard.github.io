@@ -2,7 +2,9 @@ import React from "react";
 import './App.css';
 import { LandingArea } from './components/LandingArea/LandingArea';
 import { AboutMeArea } from './components/AboutMeArea/AboutMeArea';
-import { ExperienceArea } from './components/ExperienceArea/ExperienceArea';
+import { CareerArea } from './components/CareerArea/CareerArea';
+import { ServicesArea } from './components/ServicesArea/ServicesArea';
+import { SomethingArea } from './components/SomethingArea/SomethingArea';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
     <React.Fragment>
       <LandingArea />
       <AboutMeArea />
-      <ExperienceArea />
+      <ServicesArea />
+      {/* <CareerArea /> */}
+      {/* <SomethingArea /> */}
       <Footer />
     </React.Fragment>
   );

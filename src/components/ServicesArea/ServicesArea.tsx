@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, TechnologyCardsWrapper } from './ExperienceArea.css';
+import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, TechnologyCardsWrapper } from './ServicesArea.css';
 import { FlexContainer } from '../General/GeneralComponents.css';
 import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
 import { TechnologyCard } from './TechnologyCard/TechnologyCard';
 import { SeparatorPadding } from "../General/GeneralComponents.css";
 
-export const ExperienceArea: FC = () => {
+export const ServicesArea: FC = () => {
 
     return (
         <ExperienceAreaWrapper >
@@ -15,6 +15,7 @@ export const ExperienceArea: FC = () => {
                 <TitleText >
                     {ExperienceAreaConfig.title}
                 </TitleText>
+                <div></div>
             </HeadlineWrapper>
             <SeparatorPadding value={1.5} />
             <TechnologyCardsWrapper>

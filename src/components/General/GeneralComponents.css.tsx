@@ -48,4 +48,13 @@ export const SocialMediaIcon = styled.img<{ isBackgroundLight: boolean }>`
     height: 2rem;
     padding: 0.5rem;
     transition: all 500ms ease;
+
+    // img {
+    //     filter: ${(props) => (props.isBackgroundLight ? 'brightness(0)' : 'brightness(1)')};
+    // }
+
+    :hover {
+        fill: red;
+        // fill: brightness(1);
+    }
 `;
