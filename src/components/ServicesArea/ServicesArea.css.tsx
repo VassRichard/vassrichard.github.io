@@ -25,14 +25,14 @@ export const TitleText = styled.div`
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Aspekta', sans-serif;
-    font-weight: 500;
+    font-weight: 100;
     letter-spacing: 0.05rem;
 
     ${minWidthQuery(Breakpoints.nano)} {
         font-size: 1.5rem;
     }
 
-    ${minWidthQuery(Breakpoints.nano)} {
+    ${minWidthQuery(Breakpoints.small)} {
         font-size: 1.75rem;
     }
 
@@ -41,7 +41,8 @@ export const TitleText = styled.div`
     }
 
     ${minWidthQuery(Breakpoints.large)} {
-        font-size: 3rem;
+        font-size: 2rem;
+        letter-spacing: 0.25rem;
     }
 
     ${minWidthQuery(Breakpoints.xxLarge)} {

@@ -2,28 +2,28 @@ import styled from 'styled-components';
 import { Breakpoints, minWidthQuery } from "../../utils/globals";
 
 export const AboutMeWrapper = styled.div`
-    margin: 2.5rem 2.5rem 2.5rem 2.5rem;
+    margin: 5rem 5rem 5rem 5rem;
     background-color: #FFFFFF;
 
     ${minWidthQuery(Breakpoints.nano)} {
-        margin: 3.5rem 3.5rem 3.5rem 3.5rem;
+        margin: 5rem 5rem 5rem 5rem;
     }
 
     ${minWidthQuery(Breakpoints.medium)} {
-        margin: 3.5rem 5rem 3.5rem 5rem;
+        margin: 5rem 7.5rem 5rem 7.5rem;
     }
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
-        margin: 3.5rem 10rem 3.5rem 10rem;
+        margin: 7.5rem 15rem 7.5rem 15rem;
     }
 `;
 
-export const DescriptionText = styled.div`
-    font-size: 1rem;
+export const DescriptionText = styled.div<{ size: number }>`
+    font-size: ${(props) => props.size}rem;
     letter-spacing: 0.1rem;
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
-        font-size: 1.25rem;
+        font-size: ${(props) => props.size + 0.25}rem;
     }
 `
 
@@ -42,7 +42,7 @@ export const HeadlineWrapper = styled.div`
 `;
 
 export const CurriculumVitaeText = styled.div`
-    width: 10rem;
+    width: 7.5rem;
     margin: 0 auto;
     margin-top: 1rem;
     padding: 1rem 2rem 1rem 2rem;
