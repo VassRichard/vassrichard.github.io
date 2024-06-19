@@ -21,13 +21,12 @@ export const AboutMeArea: FC = () => {
                     </DescriptionText>
                     <SeparatorMargin value={1}/>
                     <DescriptionText size={1}>
-                        Although I have 3 years of experience in native Android development, my curiosity doesn't stop there. In my spare time, I delve into creating 
-                        sleek websites and apps, and explore machine learning projects that may simplify our lives. Also out of curiosity rather than regular practice I might 
-                        find joy in nimbling in parts of a new video game concept and design or learn about system security and ethical hacking.
+                        Would you believe if I told you that my developer journey started with Photoshop back in 2014? Fast-forward to today, I think I've made that kid proud as 
+                        I've had the opportunity of building software for a start-up, and a well-established entertainment company for the last couple of years.
                     </DescriptionText>
                     <SeparatorMargin value={1}/>
                     <DescriptionText size={1}>
-                        If there's nothing on my schedule I might nerd out on my favorite video games and when I'm not in my digital realm I like to sit back and read a good book, work out to keep myself healthy or binge-watch TV series.
+                        Usually you'll find me dabbling in some tech but otherwise if there's nothing on my schedule I might nerd out on my favorite video games. When I'm not in my digital realm I like to read a good book, work out or binge-watch TV series.
                     </DescriptionText>
                 </FlexColumn>
                 <SeparatorMargin value={2.5}/>
