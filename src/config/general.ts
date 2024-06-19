@@ -1,4 +1,4 @@
-import { LandingAreaConfigType, ExperienceAreaConfigType, TechnologyConfigType, SocialMediaConfigType } from "../utils/types";
+import { LandingAreaConfigType, AboutMeConfigType, ExperienceAreaConfigType, TechnologyConfigType, SocialMediaConfigType } from "../utils/types";
 import Mobile from "../assets/technologies/mobile.jpg";
 import Web from "../assets/technologies/web.jpg";
 import MachineLearning from "../assets/technologies/machine_learning.jpg";
@@ -11,6 +11,17 @@ export const LandingAreaConfig: LandingAreaConfigType = {
     greetingText: "Hi, my name is",
     nameText: "VASS RICHARD",
     locationText: "Software developer based in Cluj-Napoca"
+};
+
+// ABOUT ME
+
+export const AboutMeConfig: AboutMeConfigType = {
+    introText: "Hello again, I'm Richard: android developer, design hobbyist, gamer, fitness enthusiast and a bad joker.",
+    midText: " Would you believe if I told you that my developer journey started with Photoshop back in 2014? Fast-forward to today, I think I've made that kid proud as " +
+    "I've had the opportunity of building software for a start-up, and a well-established entertainment company for the last couple of years.",
+    outroText: "Hello again, I'm Richard: android developer, design hobbyist, gamer, fitness enthusiast and a bad joker.",
+    socialText: "ALSO I'M SOCIAL",
+    curriculumVitae: "DOWNLOAD CV",
 };
 
 // EXPERIENCE AREA
@@ -39,9 +50,9 @@ export const TechnologyConfig: TechnologyConfigType[] = [
         }
 ];
 
+
 export const ExperienceAreaConfig: ExperienceAreaConfigType = {
     title: "WHAT I DO",
-    curriculumVitae: "DOWNLOAD CV",
     technologies: TechnologyConfig,
 };
 

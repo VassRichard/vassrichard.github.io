@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, TechnologyCardsWrapper } from './ServicesArea.css';
-import { FlexContainer } from '../General/GeneralComponents.css';
+import { ExperienceAreaWrapper, HeadlineWrapper, TechnologyCardsWrapper } from './ServicesArea.css';
+import { FlexContainer, TitleText } from '../General/GeneralComponents.css';
 import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
 import { TechnologyCard } from './TechnologyCard/TechnologyCard';

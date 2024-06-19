@@ -6,13 +6,25 @@ export type LandingAreaConfigType = {
     locationText: string;
 };
 
-// EXPERIENCE AREA
+// ABOUT ME AREA
 
-export type ExperienceAreaConfigType = {
-    title: string;
+export type AboutMeConfigType = {
+    introText: string;
+    midText: string;
+    outroText: string;
+    socialText: string;
     curriculumVitae: string;
-    technologies: TechnologyConfigType[]
 };
+
+// SOCIAL MEDIA
+
+export type SocialMediaConfigType = {
+    id: string;
+    icon: string;
+    url: string;
+};
+
+// EXPERIENCE AREA
 
 export type TechnologyConfigType = {
     title: string;
@@ -22,10 +34,7 @@ export type TechnologyConfigType = {
     description: string;
 }
 
-// SOCIAL MEDIA
-
-export type SocialMediaConfigType = {
-    id: string;
-    icon: string;
-    url: string;
-};
+export type ExperienceAreaConfigType = {
+    title: string;
+    technologies: TechnologyConfigType[]
+}
