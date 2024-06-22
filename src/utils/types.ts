@@ -26,6 +26,19 @@ export type SocialMediaConfigType = {
 
 // EXPERIENCE AREA
 
+export type RoleConfigType = {
+    title: string;
+    description: string;
+    skills: string[];
+}
+
+export type ExperienceConfigType = {
+    title: string;
+    roles: RoleConfigType[]
+}
+
+// SERVICES AREA
+
 export type TechnologyConfigType = {
     title: string;
     isEnabled: boolean;
@@ -34,7 +47,7 @@ export type TechnologyConfigType = {
     description: string;
 }
 
-export type ExperienceAreaConfigType = {
+export type ServicesConfigType = {
     title: string;
     technologies: TechnologyConfigType[]
 }

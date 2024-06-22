@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ExperienceAreaWrapper, HeadlineWrapper, TechnologyCardsWrapper } from './ServicesArea.css';
 import { FlexContainer, TitleText } from '../General/GeneralComponents.css';
-import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
+import { ServicesAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
 import { TechnologyCard } from './TechnologyCard/TechnologyCard';
 import { SeparatorPadding } from "../General/GeneralComponents.css";
@@ -13,7 +13,7 @@ export const ServicesArea: FC = () => {
             <HeadlineWrapper>
                 <div></div>
                 <TitleText >
-                    {ExperienceAreaConfig.title}
+                    {ServicesAreaConfig.title}
                 </TitleText>
                 <div></div>
             </HeadlineWrapper>

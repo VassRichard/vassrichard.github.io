@@ -12,8 +12,8 @@ function App() {
     <React.Fragment>
       <LandingArea />
       <AboutMeArea />
-      {/* <SomethingArea /> */}
       <ServicesArea />
+      {/* <SomethingArea /> */}
       {/* <CareerArea /> */}
       <Footer />
     </React.Fragment>
