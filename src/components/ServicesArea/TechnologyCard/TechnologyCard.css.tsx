@@ -6,6 +6,7 @@ export const TechnologyCardContainer = styled.div`
     width: 17.5rem;
     height: 22.5rem;
     margin: 1rem 0 1rem 0;
+    box-shadow: 0 0 2.5rem rgba(0.33, 0.33, 0.33, 0.25);
 
     ${minWidthQuery(Breakpoints.nano)} {
       margin: 1rem 0 1rem 0;
