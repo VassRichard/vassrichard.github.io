@@ -13,6 +13,7 @@ export const FlexContainer = styled.div<{ positionType: string }>`
     display: flex;
     flex-wrap: wrap;
     justify-content: ${(props) => props.positionType};
+    align-items: center;
 `;
 
 export const FlexColumn = styled.div<{
@@ -30,8 +31,9 @@ export const FlexColumn = styled.div<{
         flex: ${(props) => `1 1 ${props.columnPercentage}%;`}
         border-right: ${(props) => props.shouldHaveBorder ? '1px solid rgba(204, 204, 204, 0.7)' : 'none'};
         border-bottom: none;
+    } 
         
-    } ${(props) => props.alignColumnsCenter && `
+    ${(props) => props.alignColumnsCenter && `
         display: flex;
         justify-content: center;
     `}
@@ -39,22 +41,21 @@ export const FlexColumn = styled.div<{
 
 export const SocialMediaWrapper = styled.div<{ isBackgroundLight: boolean }>`
     margin: 0 0.75rem 0 0.75rem;
-    transition: all 500ms ease;
+    transition: filter 0.5s ease-in-out;
     cursor: pointer;
-`
+
+    img {
+        filter: brightness(0);
+    }
+`;
 
 export const SocialMediaIcon = styled.img<{ isBackgroundLight: boolean }>`
     width: 2rem;
     height: 2rem;
     padding: 0.5rem;
-    transition: all 500ms ease;
+    transition: filter 0.5s ease-in-out;
 
-    // img {
-    //     filter: ${(props) => (props.isBackgroundLight ? 'brightness(0)' : 'brightness(1)')};
-    // }
-
-    :hover {
-        fill: red;
-        // fill: brightness(1);
+    &:hover {
+        filter: invert(52%) sepia(94%) saturate(1003%) hue-rotate(-2deg) brightness(101%) contrast(101%);
     }
 `;

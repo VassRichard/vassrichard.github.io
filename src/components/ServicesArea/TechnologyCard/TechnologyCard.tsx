@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
-import { TechnologyCardContainer, TechnologyCardMetadataWrapper, TechnologyCardTitle, TechnologyCardDescription, TechnologyCardWrapper, TechnologyCardWallpaper, TechnologyCardWallpaperOverlay, MoreIconWrapper } from './TechnologyCard.css';
+import { TechnologyCardContainer, ServiceCardIcon, TechnologyCardTitle, TechnologyCardWrapper } from './TechnologyCard.css';
 import { TechnologyConfigType } from "../../../utils/types";
 import { PopupExample } from "../../Pop-up/Pop-up";
 import { useGetScreenSize } from "../../../utils/resolutions";
-import { SeparatorMargin } from "../../General/GeneralComponents.css";
+import { FlexColumn, FlexContainer } from "../../General/GeneralComponents.css";
 
 export type TechnologyCardType = {
     technology: TechnologyConfigType;
@@ -37,14 +37,14 @@ export const TechnologyCard: FC<TechnologyCardType> = ({ technology }) => {
         <TechnologyCardContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
             <PopupExample technology={technology} isOpen={isPopupOpen} closePopup={closePopup} />
             <TechnologyCardWrapper onClick={openPopup}>
-                <TechnologyCardWallpaper wallpaper={technology.wallpaper} />
-                {!isSmallDevice && <TechnologyCardWallpaperOverlay isHovered={isHovered} />}
-                <TechnologyCardMetadataWrapper>
-                    <TechnologyCardTitle>{technology.title}</TechnologyCardTitle>
-                    <SeparatorMargin value={0.1}/>
-                    <TechnologyCardDescription>{technology.summary}</TechnologyCardDescription>
-                </TechnologyCardMetadataWrapper>
-                {technology.isEnabled && !isSmallDevice && <MoreIconWrapper isHovered={isHovered}/>}
+                <FlexContainer positionType={"space-around"}>
+                    <FlexColumn textAlign={"center"} columnPercentage={25}>
+                        <ServiceCardIcon src={technology.icon} alt={technology.icon} />
+                    </FlexColumn>
+                    <FlexColumn textAlign={"center"} columnPercentage={75}>
+                        <TechnologyCardTitle isHovered={isHovered}>{technology.title}</TechnologyCardTitle>
+                    </FlexColumn>
+                </FlexContainer>
             </TechnologyCardWrapper>
         </TechnologyCardContainer>
     )

@@ -25,7 +25,7 @@ export const TitleText = styled.div`
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Aspekta', sans-serif;
-    font-weight: 100;
+    font-weight: 750;
     letter-spacing: 0.05rem;
 
     ${minWidthQuery(Breakpoints.nano)} {

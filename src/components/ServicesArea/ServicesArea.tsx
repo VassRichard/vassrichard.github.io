@@ -10,13 +10,9 @@ export const ServicesArea: FC = () => {
 
     return (
         <ExperienceAreaWrapper >
-            <HeadlineWrapper>
-                <div></div>
-                <TitleText >
-                    {ExperienceAreaConfig.title}
-                </TitleText>
-                <div></div>
-            </HeadlineWrapper>
+            <TitleText >
+                {ExperienceAreaConfig.title}
+            </TitleText>
             <SeparatorPadding value={1.5} />
             <TechnologyCardsWrapper>
                 <FlexContainer positionType={"space-around"}>
