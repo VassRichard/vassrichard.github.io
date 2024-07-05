@@ -22,11 +22,25 @@ export const AboutMeWrapper = styled.div`
 export const DescriptionText = styled.div<{ size: number }>`
     font-size: ${(props) => props.size}rem;
     letter-spacing: 0.1rem;
+    text-align: center;
+
+    ${minWidthQuery(Breakpoints.medium)} {
+        text-align: start;
+    }
 
     ${minWidthQuery(Breakpoints.xxLarge)} {
         font-size: ${(props) => props.size + 0.25}rem;
     }
-`
+`;
+
+export const SocialText = styled.div<{ size: number }>`
+    font-size: ${(props) => props.size}rem;
+    letter-spacing: 0.1rem;
+
+    ${minWidthQuery(Breakpoints.xxLarge)} {
+        font-size: ${(props) => props.size + 0.25}rem;
+    }
+`;
 
 export const HeadlineWrapper = styled.div`
     display: grid;

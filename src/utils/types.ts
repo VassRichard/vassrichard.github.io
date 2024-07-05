@@ -42,7 +42,7 @@ export type ExperienceConfigType = {
 export type TechnologyConfigType = {
     title: string;
     isEnabled: boolean;
-    wallpaper: string;
+    icon: string;
     summary: string;
     description: string;
 }
