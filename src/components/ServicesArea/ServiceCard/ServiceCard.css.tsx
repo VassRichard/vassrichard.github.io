@@ -14,6 +14,10 @@ export const TechnologyCardContainer = styled.div`
 export const ServiceCardIcon = styled.img`
     width: 2rem;
     height: 2rem;
+
+    img {
+      filter: brightness(0);
+    }
 `;
 
 export const TechnologyCardTitle = styled.p<{ isHovered: boolean }>`

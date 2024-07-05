@@ -13,8 +13,8 @@ function App() {
       <LandingArea />
       <AboutMeArea />
       <ServicesArea />
-      {/* <CareerArea /> */}
       {/* <SomethingArea /> */}
+      {/* <CareerArea /> */}
       <Footer />
     </React.Fragment>
   );

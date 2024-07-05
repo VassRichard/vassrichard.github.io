@@ -4,6 +4,7 @@ import { Breakpoints, minWidthQuery } from "../../utils/globals";
 export const ExperienceAreaWrapper = styled.div`
     margin: 3.5rem;
     background-color: #FFFFFF;
+    // background-color: #F8F8FF;
 `;
 
 export const HeadlineWrapper = styled.div`

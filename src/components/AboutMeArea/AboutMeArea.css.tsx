@@ -4,6 +4,7 @@ import { Breakpoints, minWidthQuery } from "../../utils/globals";
 export const AboutMeWrapper = styled.div`
     margin: 5rem 5rem 5rem 5rem;
     background-color: #FFFFFF;
+    // background-color: #F8F8FF;
 
     ${minWidthQuery(Breakpoints.nano)} {
         margin: 5rem 5rem 5rem 5rem;
