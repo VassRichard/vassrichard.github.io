@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AboutMeWrapper, DescriptionText, CurriculumVitaeText } from './AboutMeArea.css';
+import { AboutMeWrapper, DescriptionText, SocialText, CurriculumVitaeText } from './AboutMeArea.css';
 import { SeparatorMargin, FlexContainer, FlexColumn } from '../General/GeneralComponents.css';
 import { SocialMediaContainer } from '../SocialMediaContainer/SocialMediaContainer';
 import { SocialMediaConfig } from '../../config/general';
@@ -30,9 +30,9 @@ export const AboutMeArea: FC = () => {
                 </FlexColumn>
                 <SeparatorMargin value={2.5}/>
                 <FlexColumn textAlign={"center"} columnPercentage={20}>
-                    <DescriptionText size={1.5}>
+                    <SocialText size={1.5}>
                         {AboutMeConfig.socialText}
-                    </DescriptionText>
+                    </SocialText>
                     <SeparatorMargin value={0.5}/>
                     <SocialMediaContainer isBackgroundLight={true} socialMediaIcons={SocialMediaConfig}/>
                     <SeparatorMargin value={3}/>
