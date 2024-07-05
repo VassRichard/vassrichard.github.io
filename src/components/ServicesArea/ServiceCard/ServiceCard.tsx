@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { TechnologyCardContainer, ServiceCardIcon, TechnologyCardTitle, TechnologyCardWrapper } from './TechnologyCard.css';
+import { TechnologyCardContainer, ServiceCardIcon, TechnologyCardTitle, TechnologyCardWrapper } from './ServiceCard.css';
 import { TechnologyConfigType } from "../../../utils/types";
 import { PopupExample } from "../../Pop-up/Pop-up";
 import { useGetScreenSize } from "../../../utils/resolutions";

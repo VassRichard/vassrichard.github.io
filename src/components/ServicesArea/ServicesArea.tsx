@@ -3,7 +3,7 @@ import { ExperienceAreaWrapper, TitleText, HeadlineWrapper, TechnologyCardsWrapp
 import { FlexContainer } from '../General/GeneralComponents.css';
 import { ExperienceAreaConfig, TechnologyConfig } from '../../config/general';
 import { TechnologyConfigType } from "../../utils/types";
-import { TechnologyCard } from './TechnologyCard/TechnologyCard';
+import { TechnologyCard } from './ServiceCard/ServiceCard';
 import { SeparatorPadding } from "../General/GeneralComponents.css";
 
 export const ServicesArea: FC = () => {
